@@ -35,7 +35,7 @@ namespace DunneCore
         // return true if we run out of samples
         inline bool getSamplePair(SampleBuffer *sampleBuffer, int sampleCount, float *leftOutput, float *rightOutput, float gain)
         {
-            if (sampleBuffer == NULL || indexPoint > sampleBuffer->endPoint) return true;
+            if (sampleBuffer == nullptr || indexPoint > sampleBuffer->endPoint) return true;
             sampleBuffer->interp(indexPoint, leftOutput, rightOutput, gain);
             
             indexPoint += multiplier * increment;
